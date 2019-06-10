@@ -18,13 +18,16 @@ namespace SistemaNADD {
         public static Avaliacoes avaliacao3 = new Avaliacoes(1, 3, 1, 4, 1, "Boa Questão", 1, 2, 0, prova);
         public static Avaliacoes avaliacao4 = new Avaliacoes(1, 4, 1, 2, 1, "Boa Questão", 1, 1, 1, prova);
         public static Avaliacoes avaliacao5 = new Avaliacoes(1, 5, 1, 5, 1, "Boa Questão", 1, 4, 0, prova);
-
+        
+        
         static void Main(string[] args) {
 
             // Teste
-            Console.WriteLine(prof.Prof_Nome);   
-            prof.Prof_Nome = "Debora";          
-            Console.WriteLine(prof.Prof_Nome);   
+            Console.WriteLine(prof.Nome);
+            //prof.Prof_Nome = "Debora";          
+            //Console.WriteLine(prof.Prof_Nome);
+            Console.WriteLine(area.nomeUpperCase(area.Nome));  
+            Console.ReadKey();
         }
     }
 }

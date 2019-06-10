@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class DisciplinasProfessores {
+    class DisciplinasProfessores : DalGenerica {
         public DisciplinasProfessores(Professores dep_Professor, Disciplinas dep_Disciplina) {
             Dep_Professor = dep_Professor;
             Dep_Disciplina = dep_Disciplina;
@@ -14,9 +14,24 @@ namespace SistemaNADD {
         public Professores Dep_Professor { get; set; }
         public Disciplinas Dep_Disciplina { get; set; }
 
-    public void cadastrarDisciplinasProfessores() { }
-    public void consultarDisciplinasProfessores() { }
-    public void excluirDisciplinasProfessores() { }
-    public void listarDisciplinasProfessores() { }
+        public string Incluir()
+        {
+            return "Professro incluido na Disciplina";
+        }
+
+        public string Consultar()
+        {
+            return "Disciplinas Consultadas";
+        }
+
+        public string Excluir()
+        {
+            return "Professor não esta mais na disciplina";
+        }
+
+        public string Alterar()
+        {
+            return "Disciplina Alterada";
+        }
     }
 }
