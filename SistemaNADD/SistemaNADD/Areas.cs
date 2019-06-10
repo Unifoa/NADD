@@ -5,16 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class Areas {
-        public Areas(int area_Id, string area_Nome) {
-            Area_Id = area_Id;
-            Area_Nome = area_Nome;
+    class Areas : Basica, DalGenerica{
+        public Areas(int area_Id, string area_Nome) : base(area_Id, area_Nome) {
         }
-
-        public int Area_Id { get; set; }
-        public string Area_Nome { get; set; }
-
-        public void cadastrarArea() { }
-        public void consultarArea() { }
+        
+        public override string nomeUpperCase(string nome)
+        {
+            return nome.ToUpper();
+        }
+        public string Incluir(){
+            return "Área Incluida";
+        }
+        
+        public String Consultar() 
+        { 
+            return "Consulta de Área";
+        }
+        public String Excluir() 
+        { 
+            return "Área Excluida";
+        }
+        public String Alterar() 
+        { 
+            return "Área Alterada";
+        }
+        
     }
 }

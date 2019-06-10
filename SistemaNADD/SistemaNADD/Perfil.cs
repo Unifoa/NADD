@@ -5,13 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class Perfil {
-        public Perfil(int perfil_Id, string perfil_Nome) {
-            Perfil_Id = perfil_Id;
-            Perfil_Nome = perfil_Nome;
+    class Perfil : Basica {
+        public Perfil(int perfil_Id, string perfil_Nome) : base (perfil_Id, perfil_Nome) {
         }
 
         public int Perfil_Id { get; set; }
         public string Perfil_Nome { get; set; }
+
+        public override string nomeUpperCase(string nome)
+        {
+            return nome.ToUpper();
+        }
     }
 }

@@ -11,3 +11,8 @@ C:\Users\201700560\Desktop\SistemaNADD\SistemaNADD\obj\Debug\SistemaNADD.pdb
 C:\Users\201700560\Desktop\SistemaNADD\SistemaNADD\bin\Debug\SistemaNADD.exe.config
 C:\Users\201700560\Desktop\SistemaNADD\SistemaNADD\bin\Debug\SistemaNADD.exe
 C:\Users\201700560\Desktop\SistemaNADD\SistemaNADD\bin\Debug\SistemaNADD.pdb
+C:\Users\T431137\Desktop\SistemaNADD\SistemaNADD\bin\Debug\SistemaNADD.exe.config
+C:\Users\T431137\Desktop\SistemaNADD\SistemaNADD\obj\Debug\SistemaNADD.exe
+C:\Users\T431137\Desktop\SistemaNADD\SistemaNADD\obj\Debug\SistemaNADD.pdb
+C:\Users\T431137\Desktop\SistemaNADD\SistemaNADD\bin\Debug\SistemaNADD.exe
+C:\Users\T431137\Desktop\SistemaNADD\SistemaNADD\bin\Debug\SistemaNADD.pdb

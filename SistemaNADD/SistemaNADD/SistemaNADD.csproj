@@ -45,7 +45,10 @@
   <ItemGroup>
     <Compile Include="Areas.cs" />
     <Compile Include="Avaliacoes.cs" />
+    <Compile Include="Funcionarios.cs" />
+    <Compile Include="Basica.cs" />
     <Compile Include="Cursos.cs" />
+    <Compile Include="DalGenerica.cs" />
     <Compile Include="Disciplinas.cs" />
     <Compile Include="DisciplinasProfessores..cs" />
     <Compile Include="Perfil.cs" />
