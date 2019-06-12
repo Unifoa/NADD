@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class Avaliacoes : DalGenerica{
+    class Avaliacoes : IGenerica{
 
         public Avaliacoes(int ava_Id, int ava_Questao, int ava_Clareza, int ava_Complexibilidade, int ava_Contextualizacao, string ava_Observacao, int ava_Questao_Explicito, double ava_Valor_Questao, int ava_Mult_Escolha, Provas idProva) {
             Ava_Id = ava_Id;

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class Provas : DalGenerica {
+    class Provas : IGenerica {
         public Provas(int prova_Id, int prova_Qnt_Questao, int prova_Valor_Explicito, double prova_Valor_Prova, int prova_Equilibrio_Questao, int prova_Ref_Bibliografica, DisciplinasProfessores dep_Id) {
             Prova_Id = prova_Id;
             Prova_Qnt_Questao = prova_Qnt_Questao;

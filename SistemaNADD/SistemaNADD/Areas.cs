@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class Areas : Basica, DalGenerica{
+    class Areas : Basica, IGenerica{
         public Areas(int area_Id, string area_Nome) : base(area_Id, area_Nome) {
         }
         

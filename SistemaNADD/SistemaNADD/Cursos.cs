@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class Cursos : Basica, DalGenerica {
+    class Cursos : Basica, IGenerica {
         public Cursos(int cur_Id, string cur_Nome, int cur_Num_Periodos, Areas cur_Id_Area) : base (cur_Id, cur_Nome)
         {
             Cur_Num_Periodos = cur_Num_Periodos;

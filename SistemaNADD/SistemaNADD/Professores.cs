@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class Professores : Funcionarios, DalGenerica {
+    class Professores : Funcionarios, IGenerica {
         public Professores(int prof_Id, int prof_Matricula, string prof_Nome) : base (prof_Id, prof_Matricula, prof_Nome) {
         }
 

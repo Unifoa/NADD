@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class Usuarios : Basica, DalGenerica{
+    class Usuarios : Basica, IGenerica{
         public Usuarios(int usu_Id, string usu_Nome, string usu_Senha, Perfil idPerfil) : base(usu_Id, usu_Nome) {
             Usu_Senha = usu_Senha;
             Perfil = idPerfil;

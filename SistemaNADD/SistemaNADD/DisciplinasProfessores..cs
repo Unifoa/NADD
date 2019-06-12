@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SistemaNADD {
-    class DisciplinasProfessores : DalGenerica {
+    class DisciplinasProfessores : IGenerica {
         public DisciplinasProfessores(Professores dep_Professor, Disciplinas dep_Disciplina) {
             Dep_Professor = dep_Professor;
             Dep_Disciplina = dep_Disciplina;
