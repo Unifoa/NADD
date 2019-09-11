@@ -1,0 +1,49 @@
+﻿@page
+@model ProjetoNadd3.Pages.Disciplinas.DetailsModel
+
+@{
+    ViewData["Title"] = "Diciplina";
+}
+
+    <h2>Detalhe da Diciplina</h2>
+
+<div>
+    <h4>Disciplina</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Disciplina.Dis_Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Disciplina.Dis_Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Disciplina.Dis_Ano)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Disciplina.Dis_Ano)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Disciplina.Dis_Periodo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Disciplina.Dis_Periodo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Disciplina.Cursos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Disciplina.Cursos.Cur_Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Disciplina.Professores)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Disciplina.Professores.Prof_Nome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Disciplina.Id">Editar</a> |
+    <a asp-page="./Index">Voltar a Lista</a>
+</div>

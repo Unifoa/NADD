@@ -1,0 +1,76 @@
+﻿@page
+@model ProjetoNadd3.Pages.Avaliacoes.DeleteModel
+
+@{
+    ViewData["Title"] = "Avaliação";
+}
+
+<h2>Exclusão</h2>
+
+<h3>Tem certeza que deseja excluir este registo?</h3>
+<div>
+    <h4>Avaliacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Questao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Questao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Clareza)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Clareza)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Complexibilidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Complexibilidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Contextualizacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Contextualizacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Observacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Observacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Questao_Explicito)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Questao_Explicito)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Valor_Questao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Valor_Questao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Mult_Escolha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Mult_Escolha)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Provas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Provas.Id)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Avaliacao.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Voltar a Lista</a>
+    </form>
+</div>

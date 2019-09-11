@@ -1,0 +1,36 @@
+﻿@page
+@model ProjetoNadd3.Pages.Perfis.IndexModel
+
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Novo Perfil</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <font color="White">Nome do Perfil</font>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Perfil) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Perfil_Nome)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detalhe</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

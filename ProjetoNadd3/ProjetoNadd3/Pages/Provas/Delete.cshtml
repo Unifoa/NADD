@@ -1,0 +1,97 @@
+﻿@page
+@model ProjetoNadd3.Pages.Provas.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Exclusão</h2>
+
+<h3>Tem certeza que deseja excluir este registo?</h3>
+<div>
+    <h4>Prova</h4>
+    <hr />
+    <dl>
+        <dt>
+            Número da Avaliação:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Prova_Avd)
+        </dd>
+        <dt>
+            Qtd. Questões:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Prova_Qnt_Questao)
+        </dd>
+        <dt>
+            Valor da Prova Explicito?
+        </dt>
+        <dd>
+            @if (Html.DisplayTextFor(model => model.Prova.Prova_Valor_Explicito) == "0")
+            {
+                <text>NÃO</text>
+            }
+            else
+            {
+                <text>SIM</text>
+            }
+        </dd>
+        <dt>
+            Valor da Prova:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Prova_Valor_Prova)
+        </dd>
+        <dt>
+            Teve Equilibrio dos Valores da Questões?
+        </dt>
+        <dd>
+            @if (Html.DisplayTextFor(model => model.Prova.Prova_Equilibrio_Questao) == "0")
+            {
+                <text>NÃO</text>
+            }
+            else
+            {
+                <text>SIM</text>
+            }
+        </dd>
+        <dt>
+            Referência Bibliografica?
+        </dt>
+        <dd>
+            @if (Html.DisplayTextFor(model => model.Prova.Prova_Ref_Bibliografica) == "0")
+            {
+                <text>NÃO</text>
+            }
+            else
+            {
+                <text>SIM</text>
+            }
+        </dd>
+        <dt>
+            Disciplina:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Disciplinas.Dis_Nome)
+        </dd>
+        <dt>
+            Ano Letivo:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Disciplinas.Dis_Ano)
+        </dd>
+        <dt>
+            Periodo da Disciplina:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Disciplinas.Dis_Periodo)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Prova.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Voltar a Lista</a>
+    </form>
+</div>

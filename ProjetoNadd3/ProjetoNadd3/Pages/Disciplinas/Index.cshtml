@@ -1,0 +1,60 @@
+﻿@page
+@model ProjetoNadd3.Pages.Disciplinas.IndexModel
+
+@{
+    ViewData["Title"] = "Diciplina";
+}
+
+    <h2>Diciplinas</h2>
+
+<p>
+    <a asp-page="Create">Nova Disciplina</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <font color="White">Nome</font>
+            </th>
+            <th>
+                <font color="White">Ano</font>
+            </th>
+            <th>
+                <font color="White">Periodo</font>
+            </th>
+            <th>
+                <font color="White">Curso</font>
+            </th>
+            <th>
+                <font color="White">Professor</font>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Disciplina) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dis_Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dis_Ano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dis_Periodo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cursos.Cur_Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Professores.Prof_Nome)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detalhe</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

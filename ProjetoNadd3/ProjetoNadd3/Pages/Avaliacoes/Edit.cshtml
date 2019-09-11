@@ -1,0 +1,75 @@
+﻿@page
+@model ProjetoNadd3.Pages.Avaliacoes.EditModel
+
+@{
+    ViewData["Title"] = "Avaliação";
+}
+
+    <h2>Editar Avaliação</h2>
+
+<h4>Avaliacao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Avaliacao.Id" />
+            <div class="form-group">
+                <label asp-for="Avaliacao.Ava_Questao" class="control-label"></label>
+                <input asp-for="Avaliacao.Ava_Questao" class="form-control" />
+                <span asp-validation-for="Avaliacao.Ava_Questao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avaliacao.Ava_Clareza" class="control-label"></label>
+                <input asp-for="Avaliacao.Ava_Clareza" class="form-control" />
+                <span asp-validation-for="Avaliacao.Ava_Clareza" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avaliacao.Ava_Complexibilidade" class="control-label"></label>
+                <input asp-for="Avaliacao.Ava_Complexibilidade" class="form-control" />
+                <span asp-validation-for="Avaliacao.Ava_Complexibilidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avaliacao.Ava_Contextualizacao" class="control-label"></label>
+                <input asp-for="Avaliacao.Ava_Contextualizacao" class="form-control" />
+                <span asp-validation-for="Avaliacao.Ava_Contextualizacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avaliacao.Ava_Observacao" class="control-label"></label>
+                <input asp-for="Avaliacao.Ava_Observacao" class="form-control" />
+                <span asp-validation-for="Avaliacao.Ava_Observacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avaliacao.Ava_Questao_Explicito" class="control-label"></label>
+                <input asp-for="Avaliacao.Ava_Questao_Explicito" class="form-control" />
+                <span asp-validation-for="Avaliacao.Ava_Questao_Explicito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avaliacao.Ava_Valor_Questao" class="control-label"></label>
+                <input asp-for="Avaliacao.Ava_Valor_Questao" class="form-control" />
+                <span asp-validation-for="Avaliacao.Ava_Valor_Questao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avaliacao.Ava_Mult_Escolha" class="control-label"></label>
+                <input asp-for="Avaliacao.Ava_Mult_Escolha" class="form-control" />
+                <span asp-validation-for="Avaliacao.Ava_Mult_Escolha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avaliacao.ProvasId" class="control-label"></label>
+                <select asp-for="Avaliacao.ProvasId" class="form-control" asp-items="ViewBag.ProvasId"></select>
+                <span asp-validation-for="Avaliacao.ProvasId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Voltar a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,37 @@
+﻿@page
+@model ProjetoNadd3.Pages.Usuarios.DetailsModel
+
+@{
+    ViewData["Title"] = "Usuário";
+}
+
+<h2>Detalhe</h2>
+
+<div>
+    <h4>Usuário</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nome/Login:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.Usu_Nome)
+        </dd>
+        <dt>
+            Senha:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.Usu_Senha)
+        </dd>
+        <dt>
+            Perfil:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.Perfis.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Usuario.Id">Editar</a> |
+    <a asp-page="./Index">Volta a Listat</a>
+</div>

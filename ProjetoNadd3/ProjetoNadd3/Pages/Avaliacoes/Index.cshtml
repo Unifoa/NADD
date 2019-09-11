@@ -1,0 +1,167 @@
+﻿@page
+@model ProjetoNadd3.Pages.Avaliacoes.IndexModel
+
+@{
+    ViewData["Title"] = "Avaliação";
+}
+
+<h2>Avaliação</h2>
+
+<p>
+    <a asp-page="Create">Nova Avaliação</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <font color="White">Prova</font>
+            </th>
+            <th>
+                <font color="White">Avaliação</font>
+            </th>
+            <th>
+                <font color="White">Disciplina</font>
+            </th>
+            <th>
+                <font color="White">Número da Questão</font>
+            </th>
+            <th>
+                <font color="White">Questão Multipla Escolha?</font>
+            </th>
+            <th>
+                <font color="White">Valor da Questão Explicita?</font>
+            </th>
+            <th>
+                <font color="White">Valor da Questão</font>
+            </th>
+            <th>
+                <font color="White">Nível de Clareza</font>
+            </th>
+            <th>
+                <font color="White">Nível de Complexibilidade</font>
+            </th>
+            <th>
+                <font color="White">Nível de Contextualização</font>
+            </th>
+            <th>
+                <font color="White">Observação</font>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Avaliacao) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provas.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provas.Prova_Avd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provas.DisciplinasId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ava_Questao)
+            </td>
+            <td>
+                @if (item.Ava_Mult_Escolha == 0)
+                {
+                    <text>NÃO</text>
+                }
+                else
+                {
+                    <text>SIM</text>
+                }
+            </td>
+            <td>
+                @if (item.Ava_Questao_Explicito == 0)
+                {
+                    <text>NÃO</text>
+                }
+                else
+                {
+                    <text>SIM</text>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ava_Valor_Questao)
+            </td>
+            <td>
+                @if (item.Ava_Clareza == 0)
+                {
+                    <text>MUITO RUIM</text>
+                }
+                else if (item.Ava_Clareza == 0.25)
+                {
+                    <text>RUIM</text>
+                }
+                else if (item.Ava_Clareza == 0.5)
+                {
+                    <text>REGULAR</text>
+                }
+                else if (item.Ava_Clareza == 0.75)
+                {
+                    <text>BOM</text>
+                }
+                else if (item.Ava_Clareza == 1)
+                {
+                    <text>EXCELENTE</text>
+                }
+            </td>
+            <td>
+                @if (item.Ava_Complexibilidade == 0)
+                {
+                    <text>MUITO RUIM</text>
+                }
+                else if (item.Ava_Clareza == 0.25)
+                {
+                    <text>RUIM</text>
+                }
+                else if (item.Ava_Clareza == 0.5)
+                {
+                    <text>REGULAR</text>
+                }
+                else if (item.Ava_Clareza == 0.75)
+                {
+                    <text>BOM</text>
+                }
+                else if (item.Ava_Clareza == 1)
+                {
+                    <text>EXCELENTE</text>
+                }
+            </td>
+            <td>
+                @if (item.Ava_Contextualizacao == 0)
+                {
+                    <text>MUITO RUIM</text>
+                }
+                else if (item.Ava_Clareza == 0.25)
+                {
+                    <text>RUIM</text>
+                }
+                else if (item.Ava_Clareza == 0.5)
+                {
+                    <text>REGULAR</text>
+                }
+                else if (item.Ava_Clareza == 0.75)
+                {
+                    <text>BOM</text>
+                }
+                else if (item.Ava_Clareza == 1)
+                {
+                    <text>EXCELENTE</text>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ava_Observacao)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detalhe</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

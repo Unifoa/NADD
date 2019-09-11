@@ -1,0 +1,105 @@
+﻿@page
+@model ProjetoNadd3.Pages.Provas.IndexModel
+
+@{
+    ViewData["Title"] = "Prova";
+}
+
+<h2>Provas</h2>
+
+<p>
+    <a asp-page="Create">Nova Prova</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <font color="White">Número da Avaliação</font>
+            </th>
+            <th>
+                <font color="White"> Disciplina</font>
+            </th>
+            <th>
+                <font color="White">Ano Letivo</font>
+            </th>
+            <th>
+                <font color="White">Periodo da Disciplina</font>
+            </th>
+            <th>
+                <font color="White">Qtd. Questões</font>
+            </th>
+            <th>
+                <font color="White">Valor da Prova Explicito?</font>
+            </th>
+            <th>
+                <font color="White">Valor da Prova</font>
+            </th>
+            <th>
+                <font color="White">Teve Equilibrio dos Valores da Questões?</font>
+            </th>
+            <th>
+                <font color="White">Referência Bibliografica?</font>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Prova) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prova_Avd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disciplinas.Dis_Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disciplinas.Dis_Ano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Disciplinas.Dis_Periodo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prova_Qnt_Questao)
+            </td>
+            <td>
+                @if (item.Prova_Valor_Explicito == 0)
+                {
+                    <text>NÃO</text>
+                }
+                else
+                {
+                    <text>SIM</text>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prova_Valor_Prova)
+            </td>
+            <td>
+                @if (item.Prova_Equilibrio_Questao == 0)
+                {
+                    <text>NÃO</text>
+                }
+                else
+                {
+                    <text>SIM</text>
+                }
+            </td>
+            <td>
+                @if (item.Prova_Ref_Bibliografica == 0)
+                {
+                    <text>NÃO</text>
+                }
+                else
+                {
+                    <text>SIM</text>
+                }
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detalhe</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

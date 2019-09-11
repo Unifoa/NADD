@@ -1,0 +1,94 @@
+﻿@page
+@model ProjetoNadd3.Pages.Provas.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prova</h4>
+    <hr />
+    <dl>
+        <dt>
+            Número da Avaliação:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Prova_Avd)
+        </dd>
+        <dt>
+            Qtd. Questões:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Prova_Qnt_Questao)
+        </dd>
+        <dt>
+            Valor da Prova Explicito?
+        </dt>
+        <dd>
+            @if (Html.DisplayTextFor(model => model.Prova.Prova_Valor_Explicito) == "0")
+            {
+                <text>NÃO</text>
+            }
+            else
+            {
+                <text>SIM</text>
+            }
+        </dd>
+        <dt>
+            Valor da Prova:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Prova_Valor_Prova)
+        </dd>
+        <dt>
+            Teve Equilibrio dos Valores da Questões?
+        </dt>
+        <dd>
+            @if (Html.DisplayTextFor(model => model.Prova.Prova_Equilibrio_Questao) == "0")
+            {
+                <text>NÃO</text>
+            }
+            else
+            {
+                <text>SIM</text>
+            }
+        </dd>
+        <dt>
+            Referência Bibliografica?
+        </dt>
+        <dd>
+            @if (Html.DisplayTextFor(model => model.Prova.Prova_Ref_Bibliografica) == "0")
+            {
+                <text>NÃO</text>
+            }
+            else
+            {
+                <text>SIM</text>
+            }
+        </dd>
+        <dt>
+            Disciplina:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Disciplinas.Dis_Nome)
+        </dd>
+        <dt>
+            Ano Letivo:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Disciplinas.Dis_Ano)
+        </dd>
+        <dt>
+            Periodo da Disciplina:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Prova.Disciplinas.Dis_Periodo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Prova.Id">Editar</a> |
+    <a asp-page="./Index">Voltar a Lista</a>
+</div>

@@ -1,0 +1,25 @@
+﻿@page
+@model ProjetoNadd3.Pages.Areas.DetailsModel
+
+@{
+    ViewData["Title"] = "Áreas";
+}
+
+<h2>Detalhe da Área</h2>
+
+<div>
+    <h4>Área</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Nome da Área:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Area.Area_Nome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Area.Id">Editar</a> |
+    <a asp-page="./Index">Voltar a Lista</a>
+</div>

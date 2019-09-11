@@ -1,0 +1,28 @@
+﻿@page
+@model ProjetoNadd3.Pages.Perfis.DeleteModel
+
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+<h2>Exclusão</h2>
+
+<h3>Tem certeza que deseja excluir este registo?</h3>
+<div>
+    <h4>Perfil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nome do Perfil:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Perfil.Perfil_Nome)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Perfil.Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Voltar a Lista</a>
+    </form>
+</div>

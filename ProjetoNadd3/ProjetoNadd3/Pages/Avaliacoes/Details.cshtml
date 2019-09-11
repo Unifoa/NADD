@@ -1,0 +1,73 @@
+﻿@page
+@model ProjetoNadd3.Pages.Avaliacoes.DetailsModel
+
+@{
+    ViewData["Title"] = "Avaliação";
+}
+
+<h2>Detalhe da Avaliação</h2>
+
+<div>
+    <h4>Avaliacao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Questao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Questao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Clareza)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Clareza)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Complexibilidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Complexibilidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Contextualizacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Contextualizacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Observacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Observacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Questao_Explicito)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Questao_Explicito)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Valor_Questao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Valor_Questao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Ava_Mult_Escolha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Ava_Mult_Escolha)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Avaliacao.Provas)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Avaliacao.Provas.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Avaliacao.Id">Editar</a> |
+    <a asp-page="./Index">Voltar a Lista</a>
+</div>

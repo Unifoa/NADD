@@ -1,0 +1,31 @@
+﻿@page
+@model ProjetoNadd3.Pages.Professores.DetailsModel
+
+@{
+    ViewData["Title"] = "Professor";
+}
+
+    <h2>Detalhe do Professor</h2>
+
+<div>
+    <h4>Professor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nome do Professor:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Professor.Prof_Nome)
+        </dd>
+        <dt>
+            Matrícula do Professor:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Professor.Prof_Matricula)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Professor.Id">Editar</a> |
+    <a asp-page="./Index">Voltar a Lista</a>
+</div>

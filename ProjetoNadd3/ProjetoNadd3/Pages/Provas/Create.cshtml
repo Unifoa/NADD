@@ -1,0 +1,71 @@
+﻿@page
+@model ProjetoNadd3.Pages.Provas.CreateModel
+
+@{
+    ViewData["Title"] = "Prova";
+}
+
+<h2>Cadastrar Prova </h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Número da Avaliação:</label>
+                <input asp-for="Prova.Prova_Avd" class="form-control" />
+                <span asp-validation-for="Prova.Prova_Avd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Qtd. Questões:</label>
+                <input asp-for="Prova.Prova_Qnt_Questao" class="form-control" />
+                <span asp-validation-for="Prova.Prova_Qnt_Questao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Valor da Prova Explicito?</label>
+                <select asp-validation-for="Prova.Prova_Valor_Explicito" class="form-control">
+                    <option value="0">NÃO</option>
+                    <option value="1">SIM</option>
+                </select>
+                <span asp-validation-for="Prova.Prova_Valor_Explicito" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Valor da Prova:</label>
+                <input asp-for="Prova.Prova_Valor_Prova" class="form-control" />
+                <span asp-validation-for="Prova.Prova_Valor_Prova" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Teve Equilibrio dos Valores da Questões?</label>
+                <select asp-validation-for="Prova.Prova_Equilibrio_Questao" class="form-control">
+                    <option value="0">NÃO</option>
+                    <option value="1">SIM</option>
+                </select>
+                <span asp-validation-for="Prova.Prova_Equilibrio_Questao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Referência Bibliografica?</label>
+                <select asp-validation-for="Prova.Prova_Ref_Bibliografica" class="form-control">
+                    <option value="0">NÃO</option>
+                    <option value="1">SIM</option>
+                </select>
+                <span asp-validation-for="Prova.Prova_Ref_Bibliografica" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Disciplina</label>
+                <select asp-for="Prova.DisciplinasId" class="form-control" asp-items="ViewBag.DisciplinasId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Voltar a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

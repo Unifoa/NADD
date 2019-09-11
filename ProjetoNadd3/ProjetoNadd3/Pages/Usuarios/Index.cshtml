@@ -1,0 +1,42 @@
+﻿@page
+@model ProjetoNadd3.Pages.Usuarios.IndexModel
+
+@{
+    ViewData["Title"] = "Usuário";
+}
+
+<h2>Usuário</h2>
+
+<p>
+    <a asp-page="Create">Novo Usuário</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <font color="White">Nome/Login</font>
+            </th>
+            <th>
+                <font color="White">Perfil</font>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Usuario) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usu_Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Perfis.Id)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Detalhe</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

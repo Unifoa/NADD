@@ -1,0 +1,51 @@
+﻿@page
+@model ProjetoNadd3.Pages.Cursos.DetailsModel
+
+@{
+    ViewData["Title"] = "Curso";
+}
+
+<h2>Detalhe do Curso</h2>
+
+<div>
+    <h4>Curso</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nome do Curso:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Curso.Cur_Nome)
+        </dd>
+        <dt>
+            Qtd. de Periodos:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Curso.Cur_Num_Periodos)
+        </dd>
+        <dt>
+            Curso Anual?
+        </dt>
+        <dd>
+            @if (Html.DisplayTextFor(model => model.Curso.Cur_Ano_Sem) == "0")
+            {
+                <text>NÃO</text>
+            }
+            else
+            {
+                <text>SIM</text>
+            }
+
+        </dd>
+        <dt>
+            Área do Cruso:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Curso.Areas.Area_Nome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Curso.Id">Editar</a> |
+    <a asp-page="./Index">Voltar a lista</a>
+</div>
